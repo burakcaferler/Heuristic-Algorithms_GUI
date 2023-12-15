@@ -40,16 +40,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.Run_button.clicked.connect(self.button_clicked)
         self.sol=solution()
         self.algorithm_comboBox_type=0
-        self.clearGraphButton.clicked.connect(self.clear_graph)
     def toggle_layer(self):
         
         
             self.stackedWidget.setCurrentIndex(self.algorithm_comboBox.currentIndex())
             self.stackedWidget_2.setCurrentIndex(self.algorithm_comboBox_2.currentIndex())
-    def clear_graph(self):
-            # Clear the graph in the MatplotlibWidget
-            self.matplotlibWidget.axes.clear()
-            self.matplotlibWidget.draw()
             
     def button_clicked(self):
         
@@ -140,8 +135,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             self.matplotlibWidget.draw()
                         
-        
-                
+
+            
           
 
 if __name__ == "__main__":

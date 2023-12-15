@@ -15,23 +15,14 @@ def custom(x):
 def selectFunction(cbIndex):
         switcher = {
         0: ackley,
-        1: dixonprice,
-        2: griewank,
-        3: michalewicz,
-        4: perm,
-        5: powell,
-        6: powersum,
-        7: rastrigin,
-        8: rosenbrock,
-        9: schwefel,
-        10: sphere,
-        11: sum2,
-        12: trid,
-        13: zakharov,
-        14: ellipse,
-        15: nesterov,
-        16: saddle,
-        17: custom
+        1: griewank,
+        2: schwefel,
+        3: rastrigin,
+        4: sphere,
+        5: perm,
+        6: zakharov,
+        7: rosenbrock,
+        8: dixonprice,
     }
         return switcher.get(cbIndex, "nothing")
 

@@ -16,4 +16,5 @@ class solution:
         self.result = [[None,None]]
         self.ga = None
         self.totalNoEvaluation = 0
-        self.x={}
+        self.x=[]
+        self.y=[]

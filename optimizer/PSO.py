@@ -91,7 +91,8 @@ def PSO(objf, lb, ub, dim, PopSize, iters):
         convergence_curve[l] = gBestScore
 
         if l % 1 == 0:
-            s.x[l+1]=gBestScore
+            s.y.append(gBestScore)
+            s.x.append(l+1)
             print(
                 [
                     "At iteration "
