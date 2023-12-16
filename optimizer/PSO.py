@@ -46,7 +46,7 @@ def PSO(objf, lb, ub, dim, PopSize, iters):
     convergence_curve = numpy.zeros(iters)
 
     ############################################
-    print('PSO is optimizing  "' + objf.__name__ + '"')
+
 
     timerStart = time.time()
     s.startTime = time.strftime("%Y-%m-%d-%H-%M-%S")
@@ -93,14 +93,7 @@ def PSO(objf, lb, ub, dim, PopSize, iters):
         if l % 1 == 0:
             s.y.append(gBestScore)
             s.x.append(l+1)
-            print(
-                [
-                    "At iteration "
-                    + str(l + 1)
-                    + " the best fitness is "
-                    + str(gBestScore)
-                ]
-            )
+           
     timerEnd = time.time()
     s.best = gBestScore
     s.endTime = time.strftime("%Y-%m-%d-%H-%M-%S")

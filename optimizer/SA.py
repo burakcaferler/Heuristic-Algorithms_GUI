@@ -67,7 +67,7 @@ def SA_geometric(dim, min_values=[-5, -5], max_values=[5, 5], mu=0, sigma=1, ini
 
     while Temperature > final_temperature:
         if verbose:
-            print(' Temperature = ', round(Temperature, 4), ' f(x) = ', round(best[0, -1], 4))
+           
             sol.y.append(round(best[0, -1],4))
             sol.x.append(round(Temperature, 4))
 
@@ -81,8 +81,7 @@ def SA_geometric(dim, min_values=[-5, -5], max_values=[5, 5], mu=0, sigma=1, ini
         r = int.from_bytes(os.urandom(8), byteorder="big") / ((1 << 64) - 1)
         p = np.exp(-delta / Temperature)
 
-        if verbose:
-            print('Best solution vector;\n', best, '\n')
+      
            
         if delta < 0 or r <= p:
             guess = np.copy(new_guess)
@@ -105,7 +104,7 @@ def SA_linear(dim, min_values=[-5, -5], max_values=[5, 5], mu=0, sigma=1, initia
 
     while Temperature > final_temperature:
         if verbose:
-            print('Temperature = ', round(Temperature, 4), ' f(x) = ', round(best[0, -1], 4))
+           
             sol.y.append(round(best[0, -1],4))
             sol.x.append(round(Temperature, 4))
 
@@ -118,8 +117,7 @@ def SA_linear(dim, min_values=[-5, -5], max_values=[5, 5], mu=0, sigma=1, initia
         r = int.from_bytes(os.urandom(8), byteorder="big") / ((1 << 64) - 1)
         p = np.exp(-delta / Temperature)
 
-        if verbose:
-            print(best)
+      
             
 
         if delta < 0 or r <= p:

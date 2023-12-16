@@ -1,3 +1,4 @@
+from GWO import GWO
 from ui_mainwindow import Ui_MainWindow
 from PyQt5.QtGui import QPixmap
 from io import BytesIO
@@ -35,8 +36,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.color_legend={}
         self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
+        self.stackedWidget_3.setCurrentIndex(0)
         self.algorithm_comboBox.currentIndexChanged.connect(self.toggle_layer)
         self.algorithm_comboBox_2.currentIndexChanged.connect(self.toggle_layer)
+        self.algorithm_comboBox_3.currentIndexChanged.connect(self.toggle_layer)
         self.Run_button.clicked.connect(self.button_clicked)
         self.sol=solution()
         self.algorithm_comboBox_type=0
@@ -46,6 +49,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
             self.stackedWidget.setCurrentIndex(self.algorithm_comboBox.currentIndex())
             self.stackedWidget_2.setCurrentIndex(self.algorithm_comboBox_2.currentIndex())
+            self.stackedWidget_3.setCurrentIndex(self.algorithm_comboBox_3.currentIndex())
     def clear_graph(self):
             # Clear the graph in the MatplotlibWidget
             self.matplotlibWidget.axes.clear()
@@ -58,20 +62,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     dim=30
                     pop_size=int(self.pso_pop_size.text())
                     num_gen=int(self.pso_num_gen.text())
-                    obj_func=self.fuction_select()
+                    obj_func=self.function_select()
                     lower_bound = bounds[selected_index][0]
                     upper_bound = bounds[selected_index][1]
                     self.sol=PSO(obj_func,lower_bound,upper_bound,dim,pop_size,num_gen)
                     self.algorithm_comboBox_type=1
                     self.update_graph()
+         
+                   
                     
             if  self.algorithm_comboBox_2.currentText()=="SA":
                     selected_index = self.func_comboBox.currentIndex()
-                    print(selected_index)
+                    
                     dim=30
                     temp=int(self.sa_temp_2.text())
-                    type=self.sa_type_combobox_2.currentText()
-                    obj_func=self.fuction_select()
+                    type=self.SA_type_2.currentText()
+                    obj_func=self.function_select()
                     lower_bounds= [None for _ in range(dim)]
                     upper_bounds= [None for _ in range(dim)]
                     for idx in range(dim):
@@ -89,9 +95,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                   
                     self.algorithm_comboBox_type=2
                     self.update_graph()
+            if self.algorithm_comboBox_3.currentText()=="GWO":
+                    selected_index = self.algorithm_comboBox.currentIndex()
+                    dim=30
+                    pop_size=int(self.pso_pop_size.text())
+                    num_gen=int(self.pso_num_gen.text())
+                    obj_func=self.function_select()
+                    lower_bound = bounds[selected_index][0]
+                    upper_bound = bounds[selected_index][1]
+                    SearchAgent_no = int(self.GWO_SearchAgentsNo_3.text())
+                    Max_iter = int(self.GWO_maxIter_3.text())
+                    decrease_From = int(self.GWO_decreaseFrom_3.text())
+
+                    self.sol=GWO(obj_func,lower_bound,upper_bound,dim,SearchAgent_no,Max_iter,decrease_From)
+                    print(self.sol)
+                    self.algorithm_comboBox_type=3
+                    self.update_graph()
     
             
-    def fuction_select(self):
+    def function_select(self):
             func=self.func_comboBox.currentIndex()
             if func==0:
                 return functions.selectFunction(Functions.ackley)
@@ -137,6 +159,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.matplotlibWidget.axes.legend(handles=existing_legend.legendHandles + [legend_color], loc=(1, 0.7))
                 else:
                     self.matplotlibWidget.axes.legend(handles=[legend_color], loc=(1, 0.7))
+            elif self.algorithm_comboBox_type == 3:
+                line.lines[0].set_color("green")
+                legend_color = mpatches.Patch(color="green", label=f"{self.algorithm_comboBox_3.currentText()}")
+                if existing_legend:
+                    self.matplotlibWidget.axes.legend(handles=existing_legend.legendHandles + [legend_color], loc=(1, 0.7))
+                else:
+                    self.matplotlibWidget.axes.legend(handles=[legend_color], loc=(1, 0.7))
+            
 
             self.matplotlibWidget.draw()
                         
