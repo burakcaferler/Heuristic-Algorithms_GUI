@@ -1,0 +1,2043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1275</width>
+    <height>885</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="algorithm_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>0</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>HS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GWO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PSO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BAT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FFA</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="algorithm_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select first algorithm</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>331</width>
+      <height>216</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 254, 239);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="HS">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>151</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>PAR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_PAR"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>BW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_BW"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>NNEW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_NNEW"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>151</width>
+        <height>196</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>HMS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_HWS"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Iteration Count</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_iterCount"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>HMCR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_HMCR"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_66">
+         <property name="text">
+          <string>dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="hs_dim"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SA">
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="sa_temp"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="SA_type_1">
+         <item>
+          <property name="text">
+           <string>Linear</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Geometric</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_69">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="SA_dim_1"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GWO">
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_dim"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>SearchAgents_no</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_SearchAgentsNo"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Max_iter</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_maxIter"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>decrease_From</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_decreaseFrom"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PSO">
+     <widget class="QWidget" name="verticalLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_35">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_pop_size"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_36">
+         <property name="text">
+          <string>Number of Generations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_num_gen"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_63">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_dim"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GA">
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Dimension</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_dim"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Population Size</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_popSize"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Number of Generations</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_numOfGens"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Mutation probability</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_mutProb"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Cross-over Type</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="GA_crossType">
+           <item>
+            <property name="text">
+             <string>1-point_crossover</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2-point_crossover</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>uniform_crossover</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Selection Type</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="GA_selectType">
+           <item>
+            <property name="text">
+             <string>roulette_wheel</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tournament_selection</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="BAT">
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_72">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_dim"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_73">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_popsize"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_74">
+         <property name="text">
+          <string>Iteration Number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_iter_num"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="CS">
+     <widget class="QWidget" name="verticalLayoutWidget_15">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_26">
+       <item>
+        <widget class="QLabel" name="label_81">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_dim"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_82">
+         <property name="text">
+          <string>Population size(n)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_pop_size"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_83">
+         <property name="text">
+          <string>N_Total_Iteration</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_iter_num"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DE">
+     <widget class="QWidget" name="verticalLayoutWidget_18">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_29">
+       <item>
+        <widget class="QLabel" name="label_90">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_dim"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_91">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_pop_size"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_92">
+         <property name="text">
+          <string>Iters</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_iter_num"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="FFA">
+     <widget class="QWidget" name="verticalLayoutWidget_21">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_32">
+       <item>
+        <widget class="QLabel" name="label_99">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_dim"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_100">
+         <property name="text">
+          <string>Number of Fireflies</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_num_fireflies"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_101">
+         <property name="text">
+          <string>Max Generation</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_max_gen"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="algorithm_label_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>0</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select second algorithm</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="algorithm_comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>0</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>HS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GWO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PSO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BAT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FFA</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="Run_button">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>1211</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="graphLayout">
+     <item>
+      <widget class="QWidget" name="graphWidget" native="true"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="algorithm_label_3">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>0</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select third algorithm</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="algorithm_comboBox_3">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>0</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>HS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GWO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PSO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>GA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BAT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FFA</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="clearGraphButton">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>20</y>
+      <width>331</width>
+      <height>216</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(243, 255, 238);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="HS_2">
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>151</width>
+        <height>196</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_19">
+         <property name="text">
+          <string>HMS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_HWS_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>Iteration Count</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_iterCount_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>HMCR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_HMCR_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_67">
+         <property name="text">
+          <string>dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="hs_dim_2"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>151</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>PAR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_PAR_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>BW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_BW_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>NNEW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_NNEW_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SA_2">
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="sa_temp_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="SA_type_2">
+         <item>
+          <property name="text">
+           <string>Linear</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Geometric</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_70">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="SA_dim_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GWO_2">
+     <widget class="QWidget" name="verticalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_dim_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>SearchAgents_no</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_SearchAgentsNo_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>Max_iter</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_maxIter_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>decrease_From</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_decreaseFrom_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PSO_2">
+     <widget class="QWidget" name="verticalLayoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_17">
+       <item>
+        <widget class="QLabel" name="label_37">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_pop_size_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_38">
+         <property name="text">
+          <string>Number of Generations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_num_gen_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_64">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_dim_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GA_2">
+     <widget class="QWidget" name="horizontalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>Dimension</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_dim_2"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_32">
+           <property name="text">
+            <string>Population Size</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_popSize_2"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string>Number of Generations</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_numOfGens_2"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string>Mutation probability</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_mutProb_2"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_39">
+           <property name="text">
+            <string>Cross-over Type</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="GA_crossType_2">
+           <item>
+            <property name="text">
+             <string>1-point_crossover</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2-point_crossover</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>uniform_crossover</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_40">
+           <property name="text">
+            <string>Selection Type</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="GA_selectType_2">
+           <item>
+            <property name="text">
+             <string>roulette_wheel</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tournament_selection</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="BAT_2">
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_24">
+       <item>
+        <widget class="QLabel" name="label_75">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_dim_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_76">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_popsize_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_77">
+         <property name="text">
+          <string>Iteration Number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_iter_num_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="CS_2">
+     <widget class="QWidget" name="verticalLayoutWidget_16">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_27">
+       <item>
+        <widget class="QLabel" name="label_84">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_dim_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_85">
+         <property name="text">
+          <string>Population size(n)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_pop_size_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_86">
+         <property name="text">
+          <string>N_Total_Iteration</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_iter_num_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DE_2">
+     <widget class="QWidget" name="verticalLayoutWidget_19">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_30">
+       <item>
+        <widget class="QLabel" name="label_93">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_dim_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_94">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_pop_size_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_95">
+         <property name="text">
+          <string>Iters</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_iter_num_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="FFA_2">
+     <widget class="QWidget" name="verticalLayoutWidget_22">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_33">
+       <item>
+        <widget class="QLabel" name="label_102">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_dim_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_103">
+         <property name="text">
+          <string>Number of Fireflies</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_num_fireflies_2"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_104">
+         <property name="text">
+          <string>Max Generation</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_max_gen_2"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>20</y>
+      <width>331</width>
+      <height>216</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(239, 253, 255);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="HS_3">
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>151</width>
+        <height>196</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_15">
+       <item>
+        <widget class="QLabel" name="label_41">
+         <property name="text">
+          <string>HMS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_HWS_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>Iteration Count</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_iterCount_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>HMCR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_HMCR_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_68">
+         <property name="text">
+          <string>dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="hs_dim_3"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>151</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_18">
+       <item>
+        <widget class="QLabel" name="label_44">
+         <property name="text">
+          <string>PAR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_PAR_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_45">
+         <property name="text">
+          <string>BW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_BW_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_46">
+         <property name="text">
+          <string>NNEW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="HS_NNEW_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SA_3">
+     <widget class="QWidget" name="verticalLayoutWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>171</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_19">
+       <item>
+        <widget class="QLabel" name="label_47">
+         <property name="text">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="sa_temp_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_48">
+         <property name="text">
+          <string>Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="SA_type_3">
+         <item>
+          <property name="text">
+           <string>Linear</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Geometric</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_71">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="SA_dim_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GWO_3">
+     <widget class="QWidget" name="verticalLayoutWidget_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_20">
+       <item>
+        <widget class="QLabel" name="label_49">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_dim_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_50">
+         <property name="text">
+          <string>SearchAgents_no</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_SearchAgentsNo_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_51">
+         <property name="text">
+          <string>Max_iter</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_maxIter_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_52">
+         <property name="text">
+          <string>decrease_From</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="GWO_decreaseFrom_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PSO_3">
+     <widget class="QWidget" name="verticalLayoutWidget_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_21">
+       <item>
+        <widget class="QLabel" name="label_53">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_pop_size_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_54">
+         <property name="text">
+          <string>Number of Generations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_num_gen_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_65">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pso_dim_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GA_3">
+     <widget class="QWidget" name="horizontalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_55">
+           <property name="text">
+            <string>Dimension</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_dim_3"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_56">
+           <property name="text">
+            <string>Population Size</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_popSize_3"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_57">
+           <property name="text">
+            <string>Number of Generations</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_numOfGens_3"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_22">
+         <item>
+          <widget class="QLabel" name="label_58">
+           <property name="text">
+            <string>Mutation probability</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="GA_mutProb_3"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_59">
+           <property name="text">
+            <string>Cross-over Type</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="GA_crossType_3">
+           <item>
+            <property name="text">
+             <string>1-point_crossover</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2-point_crossover</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>uniform_crossover</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_60">
+           <property name="text">
+            <string>Selection Type</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="GA_selectType_3">
+           <item>
+            <property name="text">
+             <string>roulette_wheel</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tournament_selection</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="BAT_3">
+     <widget class="QWidget" name="verticalLayoutWidget_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_25">
+       <item>
+        <widget class="QLabel" name="label_78">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_dim_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_79">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_popsize_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_80">
+         <property name="text">
+          <string>Iteration Number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="line_BAT_iter_num_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="CS_3">
+     <widget class="QWidget" name="verticalLayoutWidget_17">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_28">
+       <item>
+        <widget class="QLabel" name="label_87">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_dim_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_88">
+         <property name="text">
+          <string>Population size(n)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_pop_size_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_89">
+         <property name="text">
+          <string>N_Total_Iteration</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CS_iter_num_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DE_3">
+     <widget class="QWidget" name="verticalLayoutWidget_20">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_31">
+       <item>
+        <widget class="QLabel" name="label_96">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_dim_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_97">
+         <property name="text">
+          <string>Population size</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_pop_size_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_98">
+         <property name="text">
+          <string>Iters</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DE_iter_num_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="FFA_3">
+     <widget class="QWidget" name="verticalLayoutWidget_23">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>146</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_34">
+       <item>
+        <widget class="QLabel" name="label_105">
+         <property name="text">
+          <string>Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_dim_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_106">
+         <property name="text">
+          <string>Number of Fireflies</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_num_fireflies_3"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_107">
+         <property name="text">
+          <string>Max Generation</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FFA_max_gen_3"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>10</y>
+      <width>181</width>
+      <height>146</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_23">
+     <item>
+      <widget class="QLabel" name="func_label">
+       <property name="text">
+        <string>Select a function:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="func_comboBox">
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Ackley</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Griewank</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Schwefel</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rastrigin</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sphere</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Perm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Zakharov</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rosenbrock</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dixon-Price</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_61">
+       <property name="text">
+        <string>Lower bound</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lower_bound"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_62">
+       <property name="text">
+        <string>Upper bound</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="upper_bound"/>
+     </item>
+    </layout>
+   </widget>
+   <zorder>algorithm_comboBox</zorder>
+   <zorder>algorithm_label</zorder>
+   <zorder>stackedWidget</zorder>
+   <zorder>algorithm_label_2</zorder>
+   <zorder>algorithm_comboBox_2</zorder>
+   <zorder>Run_button</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>algorithm_label_3</zorder>
+   <zorder>algorithm_comboBox_3</zorder>
+   <zorder>clearGraphButton</zorder>
+   <zorder>stackedWidget_3</zorder>
+   <zorder>stackedWidget_2</zorder>
+   <zorder>verticalLayoutWidget_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1275</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>algorithm_comboBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
