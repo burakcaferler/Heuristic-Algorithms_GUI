@@ -31,8 +31,10 @@ from SCA import SCA
 from SSA import SSA
 from ALO import ALO
 from WOA import WOA
-bounds=[[-32.768,32768],[-600,600],[-500,500],[-5.12,5.12],[-5.12,5.12],[-30.30],[-5.10],[-2048,2048],[-10,10]]
+bounds=[[-32.768,32768],[-600,600],[-500,500],[-5.12,5.12],[-5.12,5.12],[-30.30],[-5.10],[-2048,2048],[-10,10],[1,1]]
 from solution import solution
+from sympy import sympify, symbols
+from sympy.parsing.sympy_parser import parse_expr
 
 class MatplotlibWidget(FigureCanvas):
     def __init__(self, parent=None, width=5, height=4, dpi=100):
@@ -68,6 +70,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         self.lower_bound.setText(default_lower_bound)
         self.upper_bound.setText(default_upper_bound)
+
+        if index == 9:
+            self.specialfunction_edit.setReadOnly(False)
+        else:
+            self.specialfunction_edit.setReadOnly(True)
     def toggle_layer(self):
         
         
@@ -126,15 +133,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             elif combo_box.currentText() == "WOA":
                 self.run_algorithm(index, "WOA")
 
-
+    def special_function():
+        pass 
 
     def run_algorithm(self, algorithm_type, algorithm_name):
         
         
       
         obj_func = self.function_select()
+        func=self.func_comboBox.currentIndex()
+        if func == 9:
+            self.specialfunction_edit.setReadOnly(False)
         
-        if algorithm_name == "PSO" :  # PSO
+        elif algorithm_name == "PSO" :  # PSO
             if algorithm_type == 1:
                 pop_size = int(self.pso_pop_size.text())
                 num_gen = int(self.pso_num_gen.text())
@@ -488,7 +499,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.update_graph(algorithm_type)
 
 
-
+    def special_function(self):
+        func = self.specialfunction_edit.text()
+        x = symbols("x")
+        exp = sympify(func)
+        print(exp.subs(x,2))
+        
 
     def function_select(self):
             func=self.func_comboBox.currentIndex()
@@ -510,11 +526,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 return functions.selectFunction(Functions.rosenbrock)
             elif func==8:
                 return functions.selectFunction(Functions.dixonprice)
+            elif func == 9: 
+                 
+                specialfunction = self.special_function()
+                return specialfunction
+           
+    
+      
 
     
 
 
-
+    
 
     def update_graph(self,algorithm_type):
         line = sns.lineplot(x=self.sol.x, y=self.sol.y, ax=self.matplotlibWidget.axes, label=self.get_algorithm_label(algorithm_type))
@@ -534,6 +557,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return f"{self.algorithm_comboBox_2.currentText()}"
         elif algorithm_type == 3:
             return f"{self.algorithm_comboBox_3.currentText()}"
+        
+    
+
        
 if __name__ == "__main__":
     app = QApplication([])

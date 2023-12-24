@@ -1145,7 +1145,7 @@
     <property name="geometry">
      <rect>
       <x>1060</x>
-      <y>200</y>
+      <y>210</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -1281,7 +1281,7 @@
     <property name="geometry">
      <rect>
       <x>1140</x>
-      <y>200</y>
+      <y>210</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -3100,7 +3100,7 @@
       <x>1060</x>
       <y>10</y>
       <width>181</width>
-      <height>146</height>
+      <height>196</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_23">
@@ -3161,6 +3161,11 @@
          <string>Dixon-Price</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>Special</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>
@@ -3182,6 +3187,20 @@
      </item>
      <item>
       <widget class="QLineEdit" name="upper_bound"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_129">
+       <property name="text">
+        <string>Special Function</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="specialfunction_edit">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
