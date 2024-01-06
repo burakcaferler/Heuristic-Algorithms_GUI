@@ -1,11 +1,14 @@
 import numpy as np
+from solution import solution
 
-def DO(objf, bounds, dim, PopSize, iters):
-    lb, ub = bounds
+def DO(objf, lb, ub, dim, PopSize, iters):
     # Initialize the dragonfly population
     population = np.random.uniform(lb, ub, (PopSize, dim))
     fitness = np.array([objf(ind) for ind in population])
     g_best = population[np.argmin(fitness)]
+
+    s = solution()
+    s.objfname = objf.__name__  
 
     for epoch in range(iters):
         w = 0.9 - epoch * ((0.9 - 0.4) / iters)
@@ -19,5 +22,10 @@ def DO(objf, bounds, dim, PopSize, iters):
         idx_best = np.argmin(fitness)
         if fitness[idx_best] < objf(g_best):
             g_best = population[idx_best]
+            s.x.append(epoch)
+            s.y.append(objf(g_best))  
 
-    return g_best, objf(g_best)
+    s.best = objf(g_best) 
+    s.bestIndividual = g_best.tolist()  
+
+    return s
