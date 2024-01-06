@@ -22,8 +22,10 @@ def DO(objf, lb, ub, dim, PopSize, iters):
         idx_best = np.argmin(fitness)
         if fitness[idx_best] < objf(g_best):
             g_best = population[idx_best]
-            s.x.append(epoch)
-            s.y.append(objf(g_best))  
+
+        # Her iterasyonda s.y ve s.x listelerine değer ekleme
+        s.y.append(objf(g_best))
+        s.x.append(epoch)
 
     s.best = objf(g_best) 
     s.bestIndividual = g_best.tolist()  
